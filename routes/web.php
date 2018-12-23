@@ -15,24 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('hello', 'HelloController@index');  {
-
-$html = <<<E0F
-<html>
-<head>
-<title>Hello</title>
-<style>
-body {font-size:16pt; color:#999; }
-h1 { font-size:100pt; text-align:right; color:#eee;
-    margin:-40px 0px -50px 0px; }
-</style>
-</head>
-<body>
-    <h1>Index</h1>
-    <p>これは、Helloコントローラのindexアクションです。</p>
-</body>
-</html>
-E0F;
-
-    return $html;
-});
+Route::get('hello/{id?}/{pass?}', 'HelloController@index');
+#?は任意パラメータ
