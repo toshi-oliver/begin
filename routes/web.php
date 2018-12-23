@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('hello/{msg}',function ($msg)  {
+Route::get('hello', 'HelloController@index');  {
 
 $html = <<<E0F
 <html>
@@ -28,9 +28,8 @@ h1 { font-size:100pt; text-align:right; color:#eee;
 </style>
 </head>
 <body>
-    <h1>Hello</h1>
-    <p>{$msg}</p>
-    <p>これは、サンプルで作ったページです。</p>
+    <h1>Index</h1>
+    <p>これは、Helloコントローラのindexアクションです。</p>
 </body>
 </html>
 E0F;
